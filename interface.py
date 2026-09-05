@@ -22,7 +22,7 @@ try:
     lista_musicas = carregar_musicas()
     # 2. Componente de seleção na barra lateral
     musica_selecionada = st.selectbox("Escolha a música:", lista_musicas)
-    pasta_cifras = Path(r"C:\Users\Felipe\Desktop\Ecoa - PUC\Site Cifra\cifras")
+    pasta_cifras = Path(r"cifras")
     caminho = pasta_cifras / musica_selecionada
     
     if musica_selecionada:
@@ -32,4 +32,4 @@ try:
         
 
 except FileNotFoundError:
-    st.error("Arquivo 'IBOVDia_09-04-26.csv' não foi encontrado na pasta 'dados'. Verifique o caminho.")
+    st.error("Cifra não econtrada, tente outro nome!")
