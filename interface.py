@@ -14,7 +14,7 @@ st.set_page_config(page_title="---", layout="wide")
 # 1. Carrega os tickers do seu arquivo CSV
 @st.cache_data # Cache para carregar o arquivo rápido sem reprocessar a cada clique
 def carregar_musicas():
-    dados = buscar_arquivos(r"C:\Users\Felipe\Desktop\Ecoa - PUC\Site Cifra\cifras") 
+    dados = buscar_arquivos(r"cifras") 
     return [nome for nome in dados]
   
 
