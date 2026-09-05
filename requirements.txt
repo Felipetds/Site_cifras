@@ -1,0 +1,5 @@
+streamlit
+pandas
+path
+streamlit-pdf-viewer
+pathlib
