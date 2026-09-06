@@ -16,9 +16,9 @@ def carregar_musicas():
 try:
     lista_musicas = carregar_musicas()
     musica_selecionada = st.selectbox("Escolha a música:", lista_musicas)
-    musica_selecionada = musica_selecionada+".pdf"
+    musica_selecionada_tipo = musica_selecionada+".pdf"
     pasta_cifras = Path(r"cifras")
-    caminho = pasta_cifras / musica_selecionada
+    caminho = pasta_cifras / musica_selecionada_tipo
     print(caminho)
     
     if musica_selecionada:
