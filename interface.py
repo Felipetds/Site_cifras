@@ -23,7 +23,7 @@ try:
     
     if musica_selecionada:
         st.subheader(f"{musica_selecionada}", text_alignment="center")
-        pdf_viewer(input=caminho, width="100%", rendering="embed")
+        pdf_viewer(input=caminho, width="100%")
  
 except FileNotFoundError:
     st.error("Cifra não econtrada, tente outro nome!")
