@@ -3,11 +3,9 @@ from streamlit_pdf_viewer import pdf_viewer
 from buscar_cifras import buscar_arquivos
 from pathlib import Path
 
-# Configuração da página do Streamlit
 st.set_page_config(page_title="Cifras 1IECMagé", layout="wide")
 
-# 1. Carrega os tickers do seu arquivo CSV
-@st.cache_data # Cache para carregar o arquivo rápido sem reprocessar a cada clique
+@st.cache_data
 def carregar_musicas():
     dados = buscar_arquivos(r"cifras") 
     nomes_sem_pdf = [nome.removesuffix(".pdf") for nome in dados]
