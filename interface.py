@@ -22,7 +22,7 @@ try:
     print(caminho)
     
     if musica_selecionada:
-        st.subheader(f"{musica_selecionada}")
+        st.subheader(f"{musica_selecionada}", text_alignment="justify")
         pdf_viewer(input=caminho, height=800)
  
 except FileNotFoundError:
