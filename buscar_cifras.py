@@ -15,5 +15,5 @@ def buscar_arquivos(caminho_pasta):
     return arquivos_encontrados
 
 
-dados = buscar_arquivos(r"C:\Users\Felipe\Desktop\Ecoa - PUC\Site Cifra\Cifras prontas")
+dados = buscar_arquivos(r"cifras")
 print(dados)
