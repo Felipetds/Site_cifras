@@ -10,13 +10,15 @@ st.set_page_config(page_title="---", layout="wide")
 @st.cache_data # Cache para carregar o arquivo rápido sem reprocessar a cada clique
 def carregar_musicas():
     dados = buscar_arquivos(r"cifras") 
-    return sorted([nome for nome in dados])
+    nomes_sem_pdf = [nome.removesuffix(".pdf") for nome in dados]
+    return sorted(nomes_sem_pdf, key=str.lower)
   
 try:
     lista_musicas = carregar_musicas()
     musica_selecionada = st.selectbox("Escolha a música:", lista_musicas)
     pasta_cifras = Path(r"cifras")
-    caminho = pasta_cifras / musica_selecionada
+    tipo = ".pdf"
+    caminho = pasta_cifras / musica_selecionada / tipo
     
     if musica_selecionada:
         st.subheader(f"{musica_selecionada}")
