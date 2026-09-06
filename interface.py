@@ -4,7 +4,7 @@ from buscar_cifras import buscar_arquivos
 from pathlib import Path
 
 # Configuração da página do Streamlit
-st.set_page_config(page_title="---", layout="wide")
+st.set_page_config(page_title="Cifras 1IECMagé", layout="wide")
 
 # 1. Carrega os tickers do seu arquivo CSV
 @st.cache_data # Cache para carregar o arquivo rápido sem reprocessar a cada clique
